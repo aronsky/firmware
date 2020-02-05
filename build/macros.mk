@@ -13,7 +13,7 @@ sanitize = $(pathsubst ..,.,$1)
 ifneq (OSX,$(MAKE_OS))
 filesize=`stat --print %s $1`
 else
-filesize=`stat -f%z $1`
+filesize=`/usr/bin/stat -f%z $1`
 endif
 
 # fetches the byte at a given offset in a file

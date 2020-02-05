@@ -195,7 +195,7 @@ else
 ifeq (LINUX, $(MAKE_OS))
 filesize=`stat -c %s $1`
 else
-filesize=`stat -f%z $1`
+filesize=`/usr/bin/stat -f%z $1`
 endif
 endif
 
